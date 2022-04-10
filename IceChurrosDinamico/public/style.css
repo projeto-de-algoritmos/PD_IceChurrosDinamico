@@ -4,7 +4,13 @@
 
 .grafico {
     float: right;
-    height: 70%;
+   
+}
+
+.img-grafico{
+
+    height: 95%;
+    width: 70%;
 }
 
 
