@@ -33,7 +33,7 @@ app.post('/calculaSequencia', (req, res) => {
 
 var subSeq = new maiorSubSeq();
 var vet = [2, 3, 14, 5, 9, 8, 4];
-teste = subSeq.findRange(7, vet);
+teste = subSeq.maiorSeq2(vet.length, vet);
 console.log(teste);
 
 app.listen(port, () => {
