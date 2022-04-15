@@ -47,27 +47,6 @@
                             <input name="valor" size="25" type="text" />
                         </center>
                         <br>
-                        <center>
-                            <label>Escolha os meses</label>
-                            <select name="select">
-                                <option value="Janeiro" selected>Janeiro</option>
-                                <option value="Fevereiro">Fevereiro</option>
-                                <option value="Marco">Mar�o</option>
-                                <option value="Abril">Abril</option>
-                                <option value="Junho">Junho</option>
-                                <option value="Julho">Julho</option>
-                                <option value="Agosto">Agosto</option>
-                                <option value="Setembro">Setembro</option>
-                                <option value="Outubro">Outubro</option>
-                                <option value="Novembro">Novembro</option>
-                                <option value="Dezembro">Dezembro</option>
-                            </select>
-                        </center>
-                        <br>
-                        <center>
-                            <label>Adicione a cidade em que estavam</label>
-                            <input name="cidade" size="25" type="text" />
-                        </center>
 
                     </div>
                     <input class="btn btn-info btn-sm" type="submit" value="Adicionar"></input>
@@ -89,7 +68,9 @@
                         <div style="height: 50px;"></div>
                         <center>
                             <h5>O resultado do cálculo foi:</h5>
-                            <h5 class="card-title"><%= subSeqResult %></h5>
+                            <h5 class="card-title"><%= subSeqResult.maiorSeq %></h5>
+                            <h5>Que estão respectivamente na posição:</h5>
+                            <h5 class="card-title"><%= subSeqResult.index %></h5>
                         </center>
                         <div style="height: 50px;"></div>
                     </div>
