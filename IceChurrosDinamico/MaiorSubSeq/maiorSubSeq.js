@@ -1,12 +1,13 @@
 ﻿module.exports = class MaiorSuqSeq {
     //logica tirada do pseudocodigo do slide de Kevin Wayne
     findRange(n, vet) {
-        var marcadorSeq = [];
-        var predecessor= [];
+       var marcadorSeq = Array(vet.length).fill(1);
+       var predecessor = Array(vet.length).fill(-1);
+      
         for (var i = 1; i < n; i++) {
-            marcadorSeq[i] = 1;
+           marcadorSeq[i] = 1;
             predecessor[i] = 0;
-            for (var j = 0; j < i ;j++) {
+            for (var j = 1; j < i;j++) {
 
                 if (vet[j] < vet[i] && 1+marcadorSeq[j] > marcadorSeq[i] ) {
                     marcadorSeq[i] = 1 + marcadorSeq[j];
@@ -16,19 +17,22 @@
             }
 
         }
+       // console.log(marcadorSeq)
+       // console.log(predecessor)
 
         var maiorK = 0;
-        var maximo = vet[0];
-       
-        for (var k = 1; k <n; k++) {
+        var maximo = marcadorSeq[0];
+     
+        for (var k = 1; k < marcadorSeq.length; k++) {
             //msc = Math.max(msc, L[k]);
             if (marcadorSeq[k] > maximo) {
                 //guarda
                 maiorK = k;
                 maximo = marcadorSeq[k];
             }
+           
         }
-       
+      
         return { maiorK, marcadorSeq, predecessor, vet, maximo };
 
     }

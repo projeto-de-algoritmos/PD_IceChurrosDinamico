@@ -5,10 +5,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const bodyParser = require('body-parser');
-let arr = [];
+var arr = [];
 
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+//app.use(bodyParser.json())
 app.use(express.static("public"));
 app.set('view engine', 'ejs');
 app.set('views', './public');
@@ -18,15 +18,19 @@ app.get('', (req, res) => {
 });
 
 app.post('/addValor', (req, res) => {
-    arr.push(req.body.valor)
+    arr.push(parseFloat(req.body.valor))
+  
     res.render('home', { showResult: false });
 });
 
 app.post('/calculaSequencia', (req, res) => {
     var subSeq = new maiorSubSeq();
+    console.log(arr)
     result = subSeq.maiorSeq2(arr.length, arr);
+    
     res.render('home', { showResult: true, subSeqResult: result });
 });
+
 
 app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
