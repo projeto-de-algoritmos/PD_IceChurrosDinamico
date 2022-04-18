@@ -10,7 +10,7 @@
 | 19/0026375  | Daniel Vinicius Ribeiro Alves |
 
 ## Sobre 
-O objetivo do programa é encontrar o período em determinado intervalo de tempo que possuiu o periodo crescente que mais vendeu. Monstrando além do período a posição na lista de valores.
+O objetivo do programa é ajudar o food truck Ice Churros a encontrar o maior periodo crescente de vendas, divididos por períodos através do algoritmo de maior subsequência crescente. Monstrando além do período a posição na lista de valores, que corresponde ao período. O Ice Churros passa por diversas cidades pelo Brasil e o algoritmo o ajudará a analisar suas vendas.
 
 ## Screenshot
 
